@@ -1,0 +1,16 @@
+[passed] trans_num_unique
+[passed] trans_num_not_null
+[passed] trans_date_not_null
+[passed] cc_num_not_null
+[passed] cc_num_positive
+[passed] merchant_not_null
+[passed] category_in_set
+[passed] amt_range
+[passed] gender_in_set
+[passed] lat_range
+[passed] long_range
+[passed] city_pop_positive
+[passed] merch_lat_range
+[passed] merch_long_range
+[passed] is_fraud_range
+[passed] is_fraud_not_null

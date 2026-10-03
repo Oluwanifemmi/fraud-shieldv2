@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: fraud-train-job
+spec:
+  template:
+    spec:
+      containers:
+        - name: train
+          image: fraud-train:latest
+          imagePullPolicy: Never
+          volumeMounts:
+            - name: model-output
+              mountPath: /output
+      restartPolicy: Never
+      volumes:
+        - name: model-output
+          hostPath:
+            path: /data/fraud-model-output
+            type: DirectoryOrCreate
+  backoffLimit: 1
